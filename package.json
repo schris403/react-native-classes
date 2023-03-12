@@ -1,0 +1,51 @@
+{
+	"author": "William <william@prefinem.com>",
+	"description": "Bringing CSS Like Classes to React Native",
+	"devDependencies": {
+		"babel-eslint": "10.1.0",
+		"babel-preset-expo": "8.1.0",
+		"eslint": "6.8.0",
+		"eslint-config-prettier": "6.10.1",
+		"eslint-plugin-babel": "5.3.0",
+		"eslint-plugin-react": "7.19.0",
+		"husky": "4.2.3",
+		"lint-staged": "10.0.9",
+		"prettier": "2.0.2"
+	},
+	"files": [
+		"src/"
+	],
+	"husky": {
+		"hooks": {
+			"pre-commit": "yarn staged"
+		}
+	},
+	"license": "MIT",
+	"lint-staged": {
+		"*.js": [
+			"eslint --fix",
+			"prettier --config ./.prettierrc.json --write",
+			"git add"
+		]
+	},
+	"keywords": [
+		"react-native",
+		"reactnative",
+		"styles",
+		"styling",
+		"css",
+		"theme",
+		"theming"
+	],
+	"main": "src/index.js",
+	"name": "react-native-classes",
+	"private": false,
+	"repository": "https://github.com/schris403/react-native-classes",
+	"scripts": {
+		"clean": "yarn lint && yarn prettify",
+		"lint": "eslint src/",
+		"prettify": "prettier --config ./.prettierrc.json --write \"src/**\"",
+		"staged": "lint-staged"
+	},
+	"version": "2.0.1"
+}
