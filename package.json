@@ -47,5 +47,5 @@
 		"prettify": "prettier --config ./.prettierrc.json --write \"src/**\"",
 		"staged": "lint-staged"
 	},
-	"version": "2.0.1"
+	"version": "2.0.2"
 }
